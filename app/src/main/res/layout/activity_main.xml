@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.colin.practiceapp.MainActivity">
+    tools:context="com.example.colin.practiceapp.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <ToggleButton
         android:id="@+id/chkState"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="162dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/toggle_selector"
-        android:textOff=""
-        android:textOn=""
+        android:onClick="light1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ToggleButton
@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/toggle_selector"
+        android:onClick="light3"
         android:textOff=""
         android:textOn=""
         app:layout_constraintStart_toStartOf="@+id/chkState2"
@@ -33,12 +34,27 @@
         android:id="@+id/chkState2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="11dp"
         android:background="@drawable/toggle_selector"
+        android:onClick="light2"
         android:textOff=""
         android:textOn=""
         app:layout_constraintStart_toStartOf="@+id/chkState"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ToggleButton
+        android:id="@+id/chkState4"
+        android:layout_width="50dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/toggle2"
+        android:onClick="autolights"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -48,18 +64,18 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/lightbackground" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="23dp"
         android:text="Light 1"
+        app:layout_constraintEnd_toEndOf="@+id/chkState"
         app:layout_constraintStart_toStartOf="@+id/chkState"
         app:layout_constraintTop_toBottomOf="@+id/chkState" />
 
@@ -67,8 +83,10 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="23dp"
         android:text="Light 3"
+        app:layout_constraintEnd_toEndOf="@+id/chkState3"
         app:layout_constraintStart_toStartOf="@+id/chkState3"
         app:layout_constraintTop_toBottomOf="@+id/chkState3" />
 
@@ -76,9 +94,22 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="23dp"
         android:text="Light 2"
+        app:layout_constraintEnd_toEndOf="@+id/chkState2"
         app:layout_constraintStart_toStartOf="@+id/chkState2"
         app:layout_constraintTop_toBottomOf="@+id/chkState2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="68dp"
+        android:text="Auto switch"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/chkState4"
+        app:layout_constraintStart_toStartOf="@+id/chkState4"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
